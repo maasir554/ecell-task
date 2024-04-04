@@ -199,6 +199,7 @@ nav{
     flex-direction: column;
     gap: 20px;
     z-index: 2;
+    animation: intro-fade 1s ease;
 
 }
 
@@ -221,6 +222,7 @@ section p {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: rt-img-anim 1s ease;
 }
 
 @media screen and (max-width:1250px){
@@ -587,4 +589,25 @@ footer{
 .social-media-icons>svg path:hover{
     cursor: pointer;
     fill: hsl(136, 65%, 51%);
+}
+
+@keyframes intro-fade{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes rt-img-anim{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
